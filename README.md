@@ -19,3 +19,11 @@ jaas:group-role-add GROUP_AISMANAGER_ADMIN_USERS ROLE_AISMANAGER_PROXY_SERVICES_
 
 jaas:update
 ```
+
+### Sample use on a Blueprint context definition for a bundle
+```
+<bean id="authenticationInterceptor" class="org.apache.cxf.interceptor.security.JAASLoginInterceptor">
+    <property name="contextName" value="apba"/>
+    <property name="roleClassifier" value="ROLE_"/> 
+</bean>
+```
